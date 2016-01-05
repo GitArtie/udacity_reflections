@@ -5,3 +5,23 @@ A .git folder is created. It is needed to store meta data of commits.
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 The staging area contains only those files from the working directory that will be included in the next commit. The repository contains all commits. The staging area can thus be used to separate commits into logically connected chunks.
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+Only add logically connected files to the staging area. Use git diff or git diff --staged to check the logical consistency.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+When trying out a new feature you can keep an intact version available where bugfixes can still be applied. Branches let you easily switch between two versions.
+
+How do the diagrams help you visualize the branch structure?
+
+They show the last common states of branches and unreachable commits.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+The result is a combination of the changes of the two branches made to the last common commit. The representation in the diagramm should reflect this.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging is driven by easy logic thus making resonable changes. It saves time as you only have to check the differences when it is really necessary.
